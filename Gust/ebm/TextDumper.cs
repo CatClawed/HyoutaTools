@@ -11,6 +11,7 @@ namespace HyoutaTools.Gust.ebm {
 				Console.WriteLine( "  game can be any of:" );
 				Console.WriteLine( "  - [AT3] for Ar tonelico 3" );
 				Console.WriteLine( "  - [AnS] for Ar nosurge" );
+				Console.WriteLine( "  - [A18] for Atelier Firis" );
 				Console.WriteLine( "  All names will be printed as 'Unknown' if none of those are provided." );
 				return -1;
 			}
@@ -27,6 +28,7 @@ namespace HyoutaTools.Gust.ebm {
 			switch ( game.ToLowerInvariant() ) {
 				case "at3": names = GenerateAt3Dict(); isUtf8 = false; break;
 				case "ans": names = GenerateAnSDict(); isUtf8 = true; break;
+				case "a18": names = GenerateA18Dict(); isUtf8 = true; break;
 				default: names = new Dictionary<int, string>(); break;
 			}
 
@@ -452,6 +454,49 @@ namespace HyoutaTools.Gust.ebm {
 				{164, "Piko"},
 				{165, "Mysterious Girl"},
 				{166, "Aya & Nei"},
+			};
+		}
+		public static Dictionary<int, string> GenerateA18Dict() {
+			return new Dictionary<int, string>() {
+				{  -1, ""},
+				{   0, "Firis"},
+				{   1, "Liane"},
+				{   2, "Ilmeria"},
+				{   3, "Drossel"},
+				{   4, "Shanon"},
+				{   5, "Heinz"},
+				{   6, "Revy"},
+				{   7, "Kald"},
+				{   8, "Angriff"},
+				{   9, "Oskar"},
+				{  10, "Sophie"},
+				{  11, "Edel"},
+				{  12, "Dion"},
+				{  13, "Aurelie"},
+				{  14, "Ren"},
+				{  15, "Norbert"},
+				{  16, "Kirsche"},
+				{  17, "Tiane"},
+				{  18, "Anne"},
+				{  19, "Luis"},
+				{  20, "Escha"},
+				{  21, "Elder"},
+				{  22, "Lukas"},
+				{  23, "Nicola"},
+				{  24, "Kai"},
+				{  25, "Mea"},
+				{  26, "Nanna"},
+				{  27, "Henrikka"},
+				{  40, "Plachta"},
+				{  41, "Julio"},
+				{  42, "Fritz"},
+				{  43, "Pamela"},
+				{  44, "Logy"},
+				{  45, "Meklet"},
+				{  46, "Atomina"},
+				{  47, "???"},
+				{  48, "System"},
+				{ 160, "Palmyra"}
 			};
 		}
 	}
